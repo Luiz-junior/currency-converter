@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+#api key
+currencyApiKey.js
+
 # testing
 /coverage
 

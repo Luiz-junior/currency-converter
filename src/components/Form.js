@@ -13,12 +13,12 @@ const Form = props => {
 
             <div className="row form-group">
                 <div className="col-md-6">
-                    <label htmlFor="formSelectOF">De:</label>
+                    <label htmlFor="formSelectFROM">De:</label>
                     <ListCurrency source="of" />
                 </div>
 
                 <div className="col-md-6">
-                    <label htmlFor="formSelectFor">Para:</label>
+                    <label htmlFor="formSelectTO">Para:</label>
                     <ListCurrency source="to" />
                 </div>
             </div>

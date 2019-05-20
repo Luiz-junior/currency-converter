@@ -1,8 +1,10 @@
 import React from 'react';
 
+import ListCurrency from './ListCurrency';
+
 const Form = props => {
     return (
-        <form className="">
+        <form >
             <div className="row justify-content-md-center">
                 <div className="input-group input-group-lg">
                     <input type="number" className="form-control" />
@@ -11,24 +13,22 @@ const Form = props => {
 
             <div className="row form-group">
                 <div className="col-md-6">
-                    <label for="formSelectOF">De:</label>
-                    <select className="form-control" id="formSelectOF">
-                        <option value="BRL" label="R$">R$</option>
-                        <option value="USD" label="USD">USD</option>
-                    </select>
+                    <label htmlFor="formSelectOF">De:</label>
+                    <ListCurrency source="of" />
                 </div>
 
                 <div className="col-md-6">
-                    <label for="formSelectFor">Para:</label>
-                    <select className="form-control" id="formSelectOF">
-                        <option value="BRL" label="R$">R$</option>
-                        <option value="USD" label="USD" selected>USD</option>
-                    </select>
+                    <label htmlFor="formSelectFor">Para:</label>
+                    <ListCurrency source="to" />
                 </div>
-                <a href="#" className="btn btn-primary">Converter</a>
+            </div>
+            <div className="row">
+                <button type="submit" className="btn btn-primary btn-lg btn-block">Converter</button>
             </div>
         </form>
     );
 };
 
 export default Form;
+
+// 62 98446-4712

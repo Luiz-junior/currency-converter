@@ -1,4 +1,5 @@
 import React from 'react';
+import Form from './Form';
 
 const Converter = props => {
     return (
@@ -9,7 +10,7 @@ const Converter = props => {
                         Xumes Corretora
                     </div>
                     <div className="card-body">
-                        Formulário
+                        <Form />
                     </div>
                     <div className="card-footer text-light bg-dark">
                         0.00

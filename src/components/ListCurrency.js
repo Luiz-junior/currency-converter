@@ -3,7 +3,7 @@ import React from 'react';
 const ListCurrency = props => {
     return (
         <div>
-            <select name={props.source} className="form-control" id="formSelectOF">
+            <select name={props.source} onChange={props.onValueChange} className="form-control" id="formSelectOF">
                 <option value='AED' title='United Arab Emirates Dirham'>AED</option>
                 <option value='AFN' title='Afghan Afghani'>AFN</option>
                 <option value='ALL' title='Albanian Lek'>ALL</option>

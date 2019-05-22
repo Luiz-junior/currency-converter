@@ -1,7 +1,9 @@
 import { combineReducers } from 'redux';
 
+import convertReducer from './convertReducer';
+
 const reducers = combineReducers({
-    root: {}
+    convert: convertReducer,
 });
 
 export default reducers;

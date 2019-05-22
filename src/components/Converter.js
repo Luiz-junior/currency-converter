@@ -1,7 +1,10 @@
 import React from 'react';
+import { connect } from 'react-redux';
+
 import Form from './Form';
 
 const Converter = props => {
+    //console.log(props);
     return (
         <div className="content">
             <div className="row justify-content-md-center">
@@ -21,4 +24,8 @@ const Converter = props => {
     );
 };
 
-export default Converter;
+const mapStateToProps = state => ({
+    convert: state.convert,
+});
+
+export default connect(mapStateToProps, null)(Converter);

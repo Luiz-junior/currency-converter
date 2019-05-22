@@ -5,16 +5,9 @@ import { CONVERT_CURRENCY } from './types';
 
 const BASE_URL = 'http://apilayer.net/api/';
 
-
-export function convertCurrency(convert) {
-    const url = `${BASE_URL}convert?access_key=${API_KEY}`;
-    const params = {
-        from: convert.from,
-        to: convert.to,
-        amount: convert.amount,
-        format: 1,
-    };
-    const request = axios.get(url, params);
+export const convertCurrency = (convert) => {
+    const url = `${BASE_URL}live?access_key=${API_KEY}&source=${convert.from}&currencies=${convert.to}`;
+    const request = axios.get(url);
 
     return {
         type: CONVERT_CURRENCY,

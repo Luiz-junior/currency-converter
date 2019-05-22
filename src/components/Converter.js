@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import Form from './Form';
 
 const Converter = props => {
-    //console.log(props);
     return (
         <div className="content">
             <div className="row justify-content-md-center">
@@ -16,7 +15,7 @@ const Converter = props => {
                         <Form />
                     </div>
                     <div className="card-footer text-light bg-dark">
-                        0.00
+                        {props.convert.quotes && props.convert.quotes[Object.keys(props.convert.quotes)[0]]}
                     </div>
                 </div>
             </div>
